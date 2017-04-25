@@ -19,6 +19,7 @@ class TestSortArray < Test::Unit::TestCase
     assert_equal([1], sort([1]))
     assert_equal([1,2], sort([2,1]))
     assert_equal([1,2,3], sort([1,2,3]))
+    assert_equal([1,2,3], sort([2,1,3]))
   end
 
 end
