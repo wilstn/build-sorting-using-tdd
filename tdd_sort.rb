@@ -6,6 +6,9 @@ def sort(arr)
   elsif arr[0] > arr[1]
     arr[0], arr[1] = arr[1], arr[0]
     arr
+  elsif arr[1] > arr[2]
+    arr[1], arr[2] = arr[2], arr[1]
+    arr
   else
     arr
   end
@@ -20,6 +23,7 @@ class TestSortArray < Test::Unit::TestCase
     assert_equal([1,2], sort([2,1]))
     assert_equal([1,2,3], sort([1,2,3]))
     assert_equal([1,2,3], sort([2,1,3]))
+    assert_equal([1,2,3], sort([1,3,2]))
   end
 
 end
